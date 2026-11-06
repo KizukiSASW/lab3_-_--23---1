@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f9;
+  color: #222;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 26px;
+  color: #1d3557;
+}
+
+h2 {
+  font-size: 20px;
+  color: #1d3557;
+  margin-bottom: 12px;
+}
+
+.toolbar {
+  margin-bottom: 16px;
+}
+
+button {
+  padding: 10px 18px;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  background: #1d3557;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+button:hover:not(:disabled) {
+  background: #2a4d7a;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Область сообщений */
+.message-area {
+  min-height: 24px;
+  margin-bottom: 16px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 15px;
+  display: none;
+}
+
+.message-area.info {
+  display: block;
+  background: #e3f2fd;
+  color: #0d47a1;
+  border: 1px solid #90caf9;
+}
+
+.message-area.success {
+  display: block;
+  background: #e8f5e9;
+  color: #1b5e20;
+  border: 1px solid #a5d6a7;
+}
+
+.message-area.error {
+  display: block;
+  background: #ffebee;
+  color: #b71c1c;
+  border: 1px solid #ef9a9a;
+}
+
+/* Список публикаций */
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.post-card {
+  background: #fff;
+  border: 1px solid #dde3ea;
+  border-radius: 8px;
+  padding: 14px 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.post-card h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  color: #1d3557;
+  text-transform: capitalize;
+}
+
+.post-card p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #444;
+  white-space: pre-wrap;
+}
+
+.post-card .post-meta {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #777;
+}
+
+/* Форма */
+.form-section {
+  background: #fff;
+  border: 1px solid #dde3ea;
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 9px 12px;
+  font-size: 15px;
+  font-family: inherit;
+  border: 1px solid #c6d0da;
+  border-radius: 6px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #1d3557;
+  box-shadow: 0 0 0 2px rgba(29, 53, 87, 0.15);
+}
